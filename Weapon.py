@@ -16,4 +16,4 @@ class Amos_bow(Weapon):
     
     #武器効果
     def option(self,count=5):
-        self.damage += 12 + 8*count
+        self.damage = 12 + 8*count

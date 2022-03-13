@@ -47,15 +47,15 @@ class Character:
 
     #聖遺物を装備する
     def setArtifact(self,artifact):
-        if artifact.part == 0:
+        if artifact.part == "0":
             self.flower = artifact
-        elif artifact.part == 1:
+        elif artifact.part == "1":
             self.feather = artifact
-        elif artifact.part == 2:
+        elif artifact.part == "2":
             self.sand = artifact
-        elif artifact.part == 3:
+        elif artifact.part == "3":
             self.cup = artifact
-        elif artifact.part == 4:
+        elif artifact.part == "4":
             self.crown = artifact
 
     #ステータスに反映させる
@@ -113,7 +113,7 @@ class Ganyu(Character):
         return display_atk*self.charge_atk[3]*0.01*(1 + c_rate_sum*0.01*c_damage_sum*0.01)*(1 + damage_sum*0.01)*def_fix*element_resist
 
 '''
-
+'''
 #テスト用
 ganyu = Ganyu()
 amos = Weapon.Amos_bow()
@@ -134,3 +134,5 @@ ganyu.setArtifact(cro)
 CalcDamage.calcDamage(ganyu)
 
 print(ganyu.status)
+
+'''
